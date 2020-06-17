@@ -9,6 +9,10 @@ import { ChildOutputComponent } from './c/IO-FN/child-output/child-output.compon
 import { MyNgModelComponent } from './c/IO-FN/my-ng-model/my-ng-model.component';
 import { NgModelParentComponent } from './c/IO-FN/ng-model-parent/ng-model-parent.component';
 import { MyNgModelReallyComponent } from './c/IO-FN/my-ng-model-really/my-ng-model-really.component';
+import { JPageComponent } from './c/Jiraff-Administration/j-page/j-page.component';
+import { JItemComponent } from './c/Jiraff-Administration/j-item/j-item.component';
+import { JDetailsComponent } from './c/Jiraff-Administration/j-details/j-details.component';
+import { JLabelSpanComponent } from './c/Jiraff-Administration/j-label-span/j-label-span.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MyNgModelReallyComponent } from './c/IO-FN/my-ng-model-really/my-ng-mod
     ChildOutputComponent,
     MyNgModelComponent,
     NgModelParentComponent,
-    MyNgModelReallyComponent
+    MyNgModelReallyComponent,
+    JPageComponent,
+    JItemComponent,
+    JDetailsComponent,
+    JLabelSpanComponent
   ],
   imports: [
     BrowserModule,FormsModule

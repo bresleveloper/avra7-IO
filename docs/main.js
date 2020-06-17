@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<app-ng-model-parent></app-ng-model-parent>\r\n<br><br><br><br>\r\n\r\n<app-parent></app-parent>\r\n\r\n"
+module.exports = "\r\n\r\n<app-j-page></app-j-page>\r\n\r\n<!--\r\n<app-ng-model-parent></app-ng-model-parent>\r\n<br><br><br><br>\r\n\r\n<app-parent></app-parent>\r\n-->\r\n"
 
 /***/ }),
 
@@ -100,6 +100,50 @@ module.exports = "<p>parent works!</p>\n\n\n\n<input #ipt1 (input)=\"ipt1Val = $
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-details/j-details.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/c/Jiraff-Administration/j-details/j-details.component.html ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>j-details works!</p>\n\n\n<div *ngIf=\"j\" [attr.jid]=\"j.id\" [class]=\"'j-item' + (j.isBossy ? ' bossy' : '')\" >\n    <h3>{{j.name}}</h3>\n    <!--{ id:1, name:'shuki', height:5.55, color:'blue', isBossy:false },-->\n    <label-span label=\"height\" [val]=\"j.height\"></label-span>\n    <label-span label=\"color\" [val]=\"j.blue\"></label-span>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-item/j-item.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/c/Jiraff-Administration/j-item/j-item.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div \n        [attr.jid]=\"j.id\" \n        [class]=\"'j-item' + (j.isBossy ? ' bossy' : '')\" \n        (click)=\"clickNoteFn()\"\n        >\n\n    <h3>{{j.name}}</h3>\n    <!--{ id:1, name:'shuki', height:5.55, color:'blue', isBossy:false },-->\n    <label-span label=\"height\" [val]=\"j.height\"></label-span>\n    <label-span label=\"color\" [val]=\"j.color\"></label-span>\n    <button (click)=\"deleteNoteFn()\">delete</button>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.html ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<label>{{label}}: </label>\n<span>{{val}}</span>\n<br>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-page/j-page.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/c/Jiraff-Administration/j-page/j-page.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<h1>Welcome to International Jiraff-Administration</h1>\n\n<div style=\"display: flex;\" [style.background]=\"bgRND\">\n    <ul class=\"force-jitem\">\n        <j-item \n                *ngFor=\"let jiraff of JiraffsArray\" \n                [j]=\"jiraff\" \n                class=\"j-item-as-list\"\n\n                (clickNote)=\"selectedJ = jiraff\"\n                (deleteNote)=\"deleteJ($event)\"\n                (randomColorNote)=\"bgRND = $event\"\n                \n                ></j-item>\n    </ul>\n\n    <!-- @Output() clickNote = new EventEmitter<null>()\n  @Output() dbclickNote = new EventEmitter<null>()\n  @Output() deleteNote = new EventEmitter<number>()\n  @Output() randomColorNote = new EventEmitter<string>()-->\n\n    <app-j-details [j]=\"selectedJ\"></app-j-details>\n\n</div>  "
+
+/***/ }),
+
 /***/ "./src/app/app.component.css":
 /*!***********************************!*\
   !*** ./src/app/app.component.css ***!
@@ -163,6 +207,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _c_IO_FN_my_ng_model_my_ng_model_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./c/IO-FN/my-ng-model/my-ng-model.component */ "./src/app/c/IO-FN/my-ng-model/my-ng-model.component.ts");
 /* harmony import */ var _c_IO_FN_ng_model_parent_ng_model_parent_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./c/IO-FN/ng-model-parent/ng-model-parent.component */ "./src/app/c/IO-FN/ng-model-parent/ng-model-parent.component.ts");
 /* harmony import */ var _c_IO_FN_my_ng_model_really_my_ng_model_really_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./c/IO-FN/my-ng-model-really/my-ng-model-really.component */ "./src/app/c/IO-FN/my-ng-model-really/my-ng-model-really.component.ts");
+/* harmony import */ var _c_Jiraff_Administration_j_page_j_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./c/Jiraff-Administration/j-page/j-page.component */ "./src/app/c/Jiraff-Administration/j-page/j-page.component.ts");
+/* harmony import */ var _c_Jiraff_Administration_j_item_j_item_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./c/Jiraff-Administration/j-item/j-item.component */ "./src/app/c/Jiraff-Administration/j-item/j-item.component.ts");
+/* harmony import */ var _c_Jiraff_Administration_j_details_j_details_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./c/Jiraff-Administration/j-details/j-details.component */ "./src/app/c/Jiraff-Administration/j-details/j-details.component.ts");
+/* harmony import */ var _c_Jiraff_Administration_j_label_span_j_label_span_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./c/Jiraff-Administration/j-label-span/j-label-span.component */ "./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.ts");
+
+
+
+
 
 
 
@@ -185,7 +237,11 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _c_IO_FN_child_output_child_output_component__WEBPACK_IMPORTED_MODULE_7__["ChildOutputComponent"],
             _c_IO_FN_my_ng_model_my_ng_model_component__WEBPACK_IMPORTED_MODULE_8__["MyNgModelComponent"],
             _c_IO_FN_ng_model_parent_ng_model_parent_component__WEBPACK_IMPORTED_MODULE_9__["NgModelParentComponent"],
-            _c_IO_FN_my_ng_model_really_my_ng_model_really_component__WEBPACK_IMPORTED_MODULE_10__["MyNgModelReallyComponent"]
+            _c_IO_FN_my_ng_model_really_my_ng_model_really_component__WEBPACK_IMPORTED_MODULE_10__["MyNgModelReallyComponent"],
+            _c_Jiraff_Administration_j_page_j_page_component__WEBPACK_IMPORTED_MODULE_11__["JPageComponent"],
+            _c_Jiraff_Administration_j_item_j_item_component__WEBPACK_IMPORTED_MODULE_12__["JItemComponent"],
+            _c_Jiraff_Administration_j_details_j_details_component__WEBPACK_IMPORTED_MODULE_13__["JDetailsComponent"],
+            _c_Jiraff_Administration_j_label_span_j_label_span_component__WEBPACK_IMPORTED_MODULE_14__["JLabelSpanComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
@@ -494,6 +550,241 @@ ParentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], ParentComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-details/j-details.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-details/j-details.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2MvSmlyYWZmLUFkbWluaXN0cmF0aW9uL2otZGV0YWlscy9qLWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-details/j-details.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-details/j-details.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: JDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JDetailsComponent", function() { return JDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let JDetailsComponent = class JDetailsComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], JDetailsComponent.prototype, "j", void 0);
+JDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-j-details',
+        template: __webpack_require__(/*! raw-loader!./j-details.component.html */ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-details/j-details.component.html"),
+        styles: [__webpack_require__(/*! ./j-details.component.css */ "./src/app/c/Jiraff-Administration/j-details/j-details.component.css")]
+    })
+], JDetailsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-item/j-item.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-item/j-item.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n.j-item{\r\n    padding: 2px;\r\n    border: 1px solid green;\r\n    margin: 4px;\r\n}\r\n\r\n.j-item.bossy{\r\n    background-color: pink;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYy9KaXJhZmYtQWRtaW5pc3RyYXRpb24vai1pdGVtL2otaXRlbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIsV0FBVztBQUNmOztBQUVBO0lBQ0ksc0JBQXNCO0FBQzFCIiwiZmlsZSI6InNyYy9hcHAvYy9KaXJhZmYtQWRtaW5pc3RyYXRpb24vai1pdGVtL2otaXRlbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5qLWl0ZW17XHJcbiAgICBwYWRkaW5nOiAycHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBncmVlbjtcclxuICAgIG1hcmdpbjogNHB4O1xyXG59XHJcblxyXG4uai1pdGVtLmJvc3N5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcGluaztcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-item/j-item.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-item/j-item.component.ts ***!
+  \********************************************************************/
+/*! exports provided: JItemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JItemComponent", function() { return JItemComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let JItemComponent = class JItemComponent {
+    constructor() {
+        //notifications
+        this.clickNote = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.deleteNote = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.randomColorNote = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    clickNoteFn() {
+        console.log('clickNoteFn for jiraff ' + this.j.name);
+        this.clickNote.emit();
+    }
+    ngOnInit() {
+        setTimeout(() => {
+            this.randomColorNote.emit(this.j.color);
+        }, 1000 * this.j.id);
+    }
+    deleteNoteFn() {
+        this.deleteNote.emit(this.j.id);
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], JItemComponent.prototype, "j", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], JItemComponent.prototype, "clickNote", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], JItemComponent.prototype, "deleteNote", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], JItemComponent.prototype, "randomColorNote", void 0);
+JItemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'j-item',
+        template: __webpack_require__(/*! raw-loader!./j-item.component.html */ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-item/j-item.component.html"),
+        styles: [__webpack_require__(/*! ./j-item.component.css */ "./src/app/c/Jiraff-Administration/j-item/j-item.component.css")]
+    })
+], JItemComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2MvSmlyYWZmLUFkbWluaXN0cmF0aW9uL2otbGFiZWwtc3Bhbi9qLWxhYmVsLXNwYW4uY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: JLabelSpanComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JLabelSpanComponent", function() { return JLabelSpanComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let JLabelSpanComponent = class JLabelSpanComponent {
+    constructor() {
+        this.label = '';
+        this.val = '';
+    }
+    ngOnInit() {
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], JLabelSpanComponent.prototype, "label", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], JLabelSpanComponent.prototype, "val", void 0);
+JLabelSpanComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'label-span',
+        template: __webpack_require__(/*! raw-loader!./j-label-span.component.html */ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.html"),
+        styles: [__webpack_require__(/*! ./j-label-span.component.css */ "./src/app/c/Jiraff-Administration/j-label-span/j-label-span.component.css")]
+    })
+], JLabelSpanComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-page/j-page.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-page/j-page.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".j-item-as-list{\r\n    display: list-item;\r\n}\r\n\r\n.force-jitem{\r\n    width: 40vw;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYy9KaXJhZmYtQWRtaW5pc3RyYXRpb24vai1wYWdlL2otcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvYy9KaXJhZmYtQWRtaW5pc3RyYXRpb24vai1wYWdlL2otcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmotaXRlbS1hcy1saXN0e1xyXG4gICAgZGlzcGxheTogbGlzdC1pdGVtO1xyXG59XHJcblxyXG4uZm9yY2Utaml0ZW17XHJcbiAgICB3aWR0aDogNDB2dztcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/c/Jiraff-Administration/j-page/j-page.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/c/Jiraff-Administration/j-page/j-page.component.ts ***!
+  \********************************************************************/
+/*! exports provided: JPageComponent, Jiraff */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JPageComponent", function() { return JPageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Jiraff", function() { return Jiraff; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let JPageComponent = class JPageComponent {
+    constructor() {
+        //data, should come from Service by Ajax
+        this.JiraffsArray = [
+            { id: 1, name: 'shuki', height: 5.55, color: 'blue', isBossy: false },
+            { id: 2, name: 'edna', height: 15.55, color: 'red', isBossy: true },
+            { id: 3, name: 'bony', height: 53.55, color: 'brown', isBossy: false },
+            { id: 4, name: 'clyde', height: 5.55, color: 'violet', isBossy: false },
+            { id: 5, name: 'moti', height: 9.6, color: 'white', isBossy: false },
+            { id: 6, name: 'franko', height: 7.4, color: 'black', isBossy: true },
+            { id: 7, name: 'muli', height: 3.2, color: 'orangered', isBossy: false },
+            { id: 8, name: 'tortya', height: 12.2, color: 'gold', isBossy: true },
+            { id: 9, name: 'molina', height: 6.9, color: 'tomato', isBossy: false },
+            { id: 10, name: 'barvazon', height: 7.8, color: 'darkviolet', isBossy: false },
+            { id: 11, name: 'moolyer', height: 8.9, color: 'indigo', isBossy: false },
+        ];
+    }
+    ngOnInit() {
+    }
+    deleteJ(jid) {
+        /*for (let i = 0; i < array.length; i++) {
+          const _j = array[i];
+          if (_j.id == jid){
+            return i;
+          }
+        }*/
+        let index = this.JiraffsArray.findIndex(_j => _j.id == jid);
+        this.JiraffsArray.splice(index, 1);
+    }
+};
+JPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-j-page',
+        template: __webpack_require__(/*! raw-loader!./j-page.component.html */ "./node_modules/raw-loader/index.js!./src/app/c/Jiraff-Administration/j-page/j-page.component.html"),
+        styles: [__webpack_require__(/*! ./j-page.component.css */ "./src/app/c/Jiraff-Administration/j-page/j-page.component.css")]
+    })
+], JPageComponent);
+
+class Jiraff {
+}
 
 
 /***/ }),

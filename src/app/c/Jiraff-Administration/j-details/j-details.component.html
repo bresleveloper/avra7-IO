@@ -1,0 +1,9 @@
+<p>j-details works!</p>
+
+
+<div *ngIf="j" [attr.jid]="j.id" [class]="'j-item' + (j.isBossy ? ' bossy' : '')" >
+    <h3>{{j.name}}</h3>
+    <!--{ id:1, name:'shuki', height:5.55, color:'blue', isBossy:false },-->
+    <label-span label="height" [val]="j.height"></label-span>
+    <label-span label="color" [val]="j.blue"></label-span>
+</div>

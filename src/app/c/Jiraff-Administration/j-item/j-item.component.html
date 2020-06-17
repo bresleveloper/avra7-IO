@@ -1,0 +1,13 @@
+
+<div 
+        [attr.jid]="j.id" 
+        [class]="'j-item' + (j.isBossy ? ' bossy' : '')" 
+        (click)="clickNoteFn()"
+        >
+
+    <h3>{{j.name}}</h3>
+    <!--{ id:1, name:'shuki', height:5.55, color:'blue', isBossy:false },-->
+    <label-span label="height" [val]="j.height"></label-span>
+    <label-span label="color" [val]="j.color"></label-span>
+    <button (click)="deleteNoteFn()">delete</button>
+</div>

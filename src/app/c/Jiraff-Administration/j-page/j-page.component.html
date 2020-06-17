@@ -1,0 +1,26 @@
+
+
+<h1>Welcome to International Jiraff-Administration</h1>
+
+<div style="display: flex;" [style.background]="bgRND">
+    <ul class="force-jitem">
+        <j-item 
+                *ngFor="let jiraff of JiraffsArray" 
+                [j]="jiraff" 
+                class="j-item-as-list"
+
+                (clickNote)="selectedJ = jiraff"
+                (deleteNote)="deleteJ($event)"
+                (randomColorNote)="bgRND = $event"
+                
+                ></j-item>
+    </ul>
+
+    <!-- @Output() clickNote = new EventEmitter<null>()
+  @Output() dbclickNote = new EventEmitter<null>()
+  @Output() deleteNote = new EventEmitter<number>()
+  @Output() randomColorNote = new EventEmitter<string>()-->
+
+    <app-j-details [j]="selectedJ"></app-j-details>
+
+</div>  

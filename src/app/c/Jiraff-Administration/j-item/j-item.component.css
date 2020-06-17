@@ -1,0 +1,10 @@
+
+.j-item{
+    padding: 2px;
+    border: 1px solid green;
+    margin: 4px;
+}
+
+.j-item.bossy{
+    background-color: pink;
+}
