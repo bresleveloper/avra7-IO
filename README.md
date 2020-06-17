@@ -12,3 +12,5 @@
 ### build
 
 `ng build --output-path docs --base-href https://bresleveloper.github.io/avra7-IO/`
+
+[link to working page](https://bresleveloper.github.io/avra7-IO/)
