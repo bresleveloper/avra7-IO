@@ -1,0 +1,14 @@
+<p>ng-model-parent works!</p>
+
+
+<input [(ngModel)]="ngm1"><br>
+<input [(ngModel)]="ngm1"><br>
+{{ngm1}}<br>
+
+
+<br><br>
+<h4>app-my-ng-model</h4>
+<app-my-ng-model title="my title" [valueIn]="ngm1" (valueOut)="ngm1 = $event"></app-my-ng-model>
+
+<h4>trully</h4>
+<trully title="my title" [(shuki)]="ngm1"></trully>

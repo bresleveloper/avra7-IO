@@ -1,0 +1,20 @@
+<p>parent works!</p>
+
+
+
+<input #ipt1 (input)="ipt1Val = $event.target.value" /><br>
+<input #ipt2 (input)="ipt2Val = ipt2.value" /><br>
+<!--<button (click)="clickFN(ipt1.value, ipt2.value)">click to send to child</button>-->
+<br>
+
+<app-child [param1]="ipt1Val" [param2]="ipt2Val"></app-child>
+
+<br>
+<br>
+<br>
+
+<h3>outputs</h3>
+<app-child-output (myEvent)="num.innerHTML = $event" (secondsCounter)="secodns.innerHTML = $event"></app-child-output>
+
+<div #num></div>
+<div #secodns></div>
